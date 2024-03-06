@@ -1,3 +1,5 @@
+import { Point2 } from "./point";
+
 let a: number;
 let b: boolean;
 let c: string;
@@ -37,21 +39,7 @@ drawPoint({
 });
 
 //COHESION
-class Point2 {
-  private x: number | undefined;
-  private y: number | undefined;
 
-  //checks to make sure arguments are same type
-  //? makes parameter optoinal
-  constructor(x?: number, y?: number) {
-    this.x = x;
-    this.y = y;
-  }
 
-  draw() {
-    console.log("X: " + this.x + "Y: " + this.y);
-  }
-}
-
-let point = new Point2(1, 2); //instanstiate
+let point = new Point2(1, 2); //instanstiate or create a new object based on that class
 point.draw();
